@@ -12,13 +12,13 @@ const DiaryEditor = () => {
             ...state,
             [e.target.name]: e.target.value,                                                     
         });          
-    }
+    };
     
     const handleSubmit = () => {
         console.log(state);
         alert("저장 성공");
-    }
-
+    };
+ 
     return ( 
         <div className='DiaryEditor'>
             <h2>오늘의 일기</h2>
@@ -41,7 +41,7 @@ const DiaryEditor = () => {
                     }}                    
                 />
             </div>
-            <div>
+            <div>                
                 <select
                     name='emotion'
                     value={state.emotion}
@@ -51,7 +51,7 @@ const DiaryEditor = () => {
                     <option value={2}>2</option>
                     <option value={3}>3</option>
                     <option value={4}>4</option>
-                    <option value={5}>5</option>                    
+                    <option value={5}>5</option>                                                         
                 </select>
             </div>
             <div>
