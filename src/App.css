@@ -63,3 +63,7 @@ textarea {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+
+.DiaryItem button {
+  cursor: pointer;
+}
