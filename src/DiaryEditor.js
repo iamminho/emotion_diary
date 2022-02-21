@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';
 
-const DiaryEditor = () => {
+const DiaryEditor = ({onCreate}) => {
 
     const authorInput = useRef();
     const contentInput = useRef();
@@ -30,10 +30,15 @@ const DiaryEditor = () => {
             //alert('본문은 5글자 이상 입력해주세요')
             return;
         }
-        
+        onCreate(state.author, state.content, state.emotion);
         alert("저장 성공");
+        setState({ //저장이 성공하면 입력칸을 초기화한다.
+            author: "",
+            content: "",
+            emotion: 1,
+        });
     };
- 
+  
     return ( 
         <div className='DiaryEditor'>
             <h2>오늘의 일기</h2>
